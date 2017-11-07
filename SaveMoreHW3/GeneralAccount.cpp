@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "GeneralAccount.h"
+#include <iostream>
 using namespace std;
 
 GeneralAccount::GeneralAccount()
@@ -51,7 +52,7 @@ double GeneralAccount::Withdraw(double w)
 			// CD Account withdraw
 		else if (accType = 3)
 		{
-			balance = (balance - w*(1.1);
+			balance = (balance - w*(1.1));
 			return 0;
 		}
 	}
@@ -60,5 +61,13 @@ double GeneralAccount::Withdraw(double w)
 		return -1;
 	}
 
+}
+
+void GeneralAccount::Display()
+{
+	cout << "Account Number" << accNum << endl;
+	cout << "Account Type" << accType << endl;
+	cout << "Balance" << balance << endl;
+	cout << "Monthly Interest" << iRate << endl;
 }
 

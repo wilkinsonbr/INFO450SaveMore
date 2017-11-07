@@ -19,6 +19,7 @@ Checking::Checking(int a, double i, double b, int t)
 double Checking::Order(double o)
 {
 	checkBalance -= fee;
+	return 0;
 }
 
 
