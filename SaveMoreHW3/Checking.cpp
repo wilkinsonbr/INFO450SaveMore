@@ -1,18 +1,26 @@
 #include "stdafx.h"
 #include "Checking.h"
 #include "GeneralAccount.h"
-#include <string>
 
 using namespace std;
 
-Checking::Checking(int a, double i, double b, string t)
+Checking::Checking()
 {
-	a = 4021;
-	b = 510;
-	t = "Checking";
+	
+}
 
+Checking::Checking(int a, double i, double b, int t)
+{
+	checkBalance = b;
+	fee = 15;
 
 }
+
+double Checking::Order(double o)
+{
+	checkBalance -= fee;
+}
+
 
 
 

@@ -7,11 +7,11 @@ GeneralAccount::GeneralAccount()
 	accNum = 0;
 	iRate = 0;
 	balance = 0;
-	accType = "";
+	accType = 0;
 
 }
 
-GeneralAccount::GeneralAccount(int a, double i, double b, string t)
+GeneralAccount::GeneralAccount(int a, double i, double b, int t)
 {
 	accNum = a;
 	iRate = i;
@@ -19,3 +19,46 @@ GeneralAccount::GeneralAccount(int a, double i, double b, string t)
 	accType = t;
 
 }
+double GeneralAccount::Deposit(double d)
+{
+	if (d >= 0)
+	{
+		balance = (balance + d);
+		return 0;
+	}
+	else
+	{
+		return -1;
+	}
+
+}
+
+double GeneralAccount::Withdraw(double w)
+{
+	if (w <= 0 && balance - w > 0)
+	{	//Checking account withdraw
+		if (accType = 1)
+		{
+			balance = (balance - w);
+			return 0;
+		}
+			// Savings Account withdraw
+		else if (accType = 2)
+		{
+			balance = (balance - w - 2);
+			return 0;
+		}
+			// CD Account withdraw
+		else if (accType = 3)
+		{
+			balance = (balance - w*(1.1);
+			return 0;
+		}
+	}
+	else // If the withdrawl would put the account into the negative
+	{
+		return -1;
+	}
+
+}
+

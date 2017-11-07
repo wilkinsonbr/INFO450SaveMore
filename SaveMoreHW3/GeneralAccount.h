@@ -1,5 +1,6 @@
 #pragma once
-#include <string>
+#include <stdio.h>
+#include <iostream>
 using namespace std;
 
 class GeneralAccount
@@ -8,12 +9,13 @@ private:
 	int accNum;
 	double iRate;
 	double balance;
-	string accType;
+	int accType;
 
 public:
 	GeneralAccount();
-	GeneralAccount(int a, double i, double b, string t);
-	virtual void Withdraw(double total);
-	virtual void Deposit(double total);
-	virtual void Display() = 0;
+	GeneralAccount(int a, double i, double b, int t);
+	virtual double Withdraw(double w);
+	virtual double Deposit(double d);
+	virtual void Display();
 };
+
