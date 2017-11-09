@@ -1,16 +1,21 @@
+#pragma once
 #include "GeneralAccount.h"
-using namespace std;
 
+//Declares the Class
 class CD : public GeneralAccount
 {
 private:
+	//Defines early withdrawl amount
+	int withdraw;
+	//Defines the number of terms
 	int term;
-	double cdBalance;
-
 public:
 	CD();
-
-	CD(int a, double i, double b, int t);
-
-	double Interest(double x);
+	CD(int a, double b, double i, int w, int t);
+	void Input();
+	void Display();
+	//Calculates monthly interest
+	double MonthlyInterest(int t);
+	//Calculates early withdrawl
+	double WithdrawCD(int w);
 };

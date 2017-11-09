@@ -1,21 +1,20 @@
 #pragma once
-#include <stdio.h>
-#include <iostream>
+
 using namespace std;
 
-class GeneralAccount
-{
-private:
+//Header for main type of account. Including what is universal through all of the account types
+
+class GeneralAccount {
+
+protected:
 	int accNum;
-	double iRate;
 	double balance;
-	int accType;
+	double interest;
 
 public:
 	GeneralAccount();
-	GeneralAccount(int a, double i, double b, int t);
-	virtual double Withdraw(double w);
-	virtual double Deposit(double d);
-	virtual void Display();
+	GeneralAccount(int a, double b, double i);
+	virtual void Display() = 0;
+	virtual void Input() = 0;
 };
 

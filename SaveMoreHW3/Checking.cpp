@@ -1,27 +1,44 @@
 #include "stdafx.h"
-#include "Checking.h"
 #include "GeneralAccount.h"
+#include "Checking.h"
+#include <iostream>
 
 using namespace std;
 
-Checking::Checking()
+Checking::Checking() : GeneralAccount()
 {
-	
+	Checks = 0;
 }
 
-Checking::Checking(int a, double i, double b, int t)
+Checking::Checking(int a, double b, double i, int c, int w) : GeneralAccount(a,b,i)
 {
-	checkBalance = b;
-	fee = 15;
-
+	Checks = c;
 }
 
-double Checking::Order(double o)
+void Checking::Display()
 {
-	checkBalance -= fee;
-	return 0;
+	cout << "Checking Account Number " << accNum << endl;
+	cout << "Balance: $" << balance << endl;
 }
 
+void Checking::Input()
+{
+	accNum = 1000;
+	balance = 10000;
+	interest = 0;
+	Checks = 15;
+}
 
+void Checking::CheckBal()
+{
+	if (balance < 500)
+	{
+		balance = balance - 5;
+	}
+}
+double Checking::WithdrawChecking(int w)
+{
 
-
+	balance = balance - w;
+	return balance;
+}
