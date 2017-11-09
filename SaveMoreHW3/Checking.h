@@ -22,5 +22,5 @@ public:
 	//Goes through with withdrawl of money from the checking account.
 	double WithdrawChecking(int w);
 
-	// void Order();
+	 double Order();
 };

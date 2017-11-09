@@ -42,3 +42,9 @@ double Checking::WithdrawChecking(int w)
 	balance = balance - w;
 	return balance;
 }
+
+double Checking::Order()
+{
+	balance = balance - 15;
+	return balance;
+}

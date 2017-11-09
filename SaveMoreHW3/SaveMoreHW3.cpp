@@ -100,8 +100,29 @@ int main()
 			cout << endl;
 			cout << endl;
 
-			
+			cout << "Order a check book" << endl;
+			cout << endl;
+
+			//Withdrawl from Checking
+			c.Input();
+			c.Order();
+			c.Display();
+			cout << endl;
+			cout << endl;
+
+			c.Display();
+			cout << endl;
+			cout << endl;
+
+			s.Display();
+			cout << endl;
+			cout << endl;
+
+			cd.Display();
+			cout << endl;
+			cout << endl;
 
 	}
 
 }
+
